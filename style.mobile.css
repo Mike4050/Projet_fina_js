@@ -1,0 +1,67 @@
+.header nav h1 {
+  float: none;
+  text-align: center;
+}
+.header nav ul {
+  float: none;
+}
+.header nav ul li {
+  float: none;
+}
+.header nav ul li a {
+  padding: 10px;
+  text-align: center;
+}
+.vp-content {
+  padding-top: 50px;
+}
+.vp-content h1 {
+  font-size: 2rem;
+}
+.feature {
+  float: none;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.Notre équipe {
+  padding: 80px 20px 50px 0px;
+  overflow: auto;
+  min-height: 100vh;
+}
+.Notre équipe-image {
+  float: nones;
+  width: 100%;
+  border: 0px;
+  border-radius: 5px;
+  display: block;
+  margin: auto;
+  margin-bottom: 3rem;
+}
+.where-text {
+  float: none;
+  width: 100%;
+}
+.contact {
+  padding: 50px 0px 50px 0px;
+  min-height: 100vh;
+}
+/* style.mobile.css */
+
+/* Styles pour les smartphones */
+@media only screen and (max-width: 500px) {
+  /* Ajoutez vos styles spécifiques pour les smartphones ici */
+  /* Par exemple */
+  body {
+    font-size: 14px; /* Réduire la taille de la police pour les smartphones */
+  }
+}
+
+/* Styles pour les appareils Android */
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  /* Ajoutez vos styles spécifiques pour les appareils Android ici */
+  /* Par exemple */
+  .header {
+    height: 100px; /* Réduire la hauteur de l'en-tête pour les appareils Android en mode paysage */
+  }
+}
+

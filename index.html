@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <link rel="stylesheet" href="./CSS/Look.css">
+  <link rel="stylesheet" media="only screen and (max-width:500px)" href="./CSS/style.mobile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Ledor | Accueil</title>
+  <style>
+    /* Ajoutez ces styles pour l'animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(70px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .vp-content {
+      animation: fadeIn 1s ease-out;
+    }
+
+    span.immobilier {
+      color: #ffff00; /* Jaune */
+    }
+
+    .boite2 {
+      text-align: center; /* Centrer le texte horizontalement */
+      margin-top: 0; /* Réduire la marge en haut */
+      padding-top: 0px; /* Ajouter un espace au-dessus du texte */
+    }
+
+    .boite2 h1 {
+      margin-bottom: 0; /* Supprimer la marge en bas */
+    }
+
+    /* Style for the crown icon */
+    .fa-crown {
+      color: yellow; /* Set icon color to yellow */
+    }
+
+    /* Style for the Ledor logo */
+    h1 a {
+      font-family: "este"; /* Font Indie Flower for "Ledor" */
+      color: #f1f1f1; /* Set Ledor text color to yellow */
+    }
+
+    /* Style pour la section de biographie */
+    .auto-bio {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 20px;
+      padding-left: 10px;
+    }
+
+    /* Style pour l'image de la biographie */
+    .bio-image img {
+      width: 600px;
+    }
+
+    /* Style pour le texte de la biographie */
+    .bio-text {
+      max-width: 600px;
+      padding-inline: 10px;
+      background-color: #555;
+      height: 352px;
+      padding-top: 50px;
+    }
+
+    .bio-text h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #f1f1f1;
+    }
+
+    .bio-text p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #f1f1f1;
+    }
+
+    .bar {
+      padding: 1px;
+      margin: 10px;
+      margin-inline: 100px;
+      color: black;
+    }
+
+    footer {
+      background-color: #111213;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      height: auto;
+    }
+
+    /* Styles pour l'ensemble du document */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f0f0f0; /* Couleur de fond pour le corps */
+      padding: 20px;
+    }
+
+    /* Style pour la section des commentaires */
+    #commentaires {
+      background-color: #fff; /* Fond blanc pour la section des commentaires */
+      border: 1px solid #ddd; /* Bordure autour de la section des commentaires */
+      border-radius: 8px; /* Coins arrondis pour la section des commentaires */
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    /* Style pour la liste des commentaires */
+    #comment-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    /* Style pour chaque commentaire */
+    .comment {
+      background-color: #fff; /* Fond blanc pour chaque commentaire */
+      border: 2px double #ccc; /* Bordure double grise autour de chaque commentaire */
+      margin-bottom: 15px; /* Marge en bas entre chaque commentaire */
+      padding: 10px; /* Espacement à l'intérieur de chaque commentaire */
+      border-radius: 8px; /* Coins arrondis pour chaque commentaire */
+      display: flex; /* Utilisation de flexbox pour l'alignement */
+      align-items: center; /* Alignement vertical */
+    }
+
+    /* Style pour l'image de profil */
+    .comment .user-image {
+      width: 50px; /* Taille de l'image de profil */
+      height: 50px;
+      border-radius: 50%; /* Forme circulaire */
+      margin-right: 10px; /* Marge à droite */
+    }
+
+    /* Style pour le texte du commentaire */
+    .comment p {
+      margin: 5px 0; /* Marge autour du texte du commentaire */
+    }
+
+    /* Style pour le formulaire de commentaire */
+    #comment-form {
+      margin-top: 5px;
+    }
+
+    #image-upload,
+    #user-name,
+    #new-comment {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+
+    #comment-form button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    #comment-form button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <section class="header">
+    <nav>
+      <h1>
+        <i class="fa-solid fa-crown"></i> <a href="./index.html">Ledor</a>
+      </h1>
+      <ul>
+        <li><a class="active" href="#">Accueil</a></li>
+        <li><a href="./Js/Nos_offres.html">Nos offres</a></li>
+        <li><a href="./Js/Notre équipe.html">Notre équipe</a></li>
+        <li><a href="./Js/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <section class="vp">
+    <div class="vp-content">
+      <h1>
+        Un <span class="immobilier">immobilier</span> d'exception
+        pour des clients d'exception
+      </h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim id eos vel? Inventore, 
+        enim eum nihil autem ea vitae blanditiis veritatis quasi aspernatur reiciendis quae vo
+      </p>
+    </div>
+  </section>
+
+  <section class="properties">
+    <div class="container">
+      <p>Nos dernières acquisitions</p>
+      <div class="properties-grid">
+        <div class="property-item">
+          <img src="./Image/mike1  (2).jpg" alt="Propriété immobilière de luxe">
+          <h3>Appartement Paris spacieux</h3>
+          <p>21 chambres 450 m2</p>
+          <span class="prix">3 900 000€ - $4 200 000</span>
+        </div>
+        <div class="property-item">
+          <img src="./Image/image2.jpg" alt="Propriété immobilière de luxe">
+          <h3>Appartement Paris spacieux</h3>
+          <p>18 chambres 300 m2</p>
+          <div class="bar"></div>
+          <span class="prix">2 500 000€ - $2 800 000</span>
+        </div>
+        <div class="property-item">
+          <img src="./Image/mike1  (4).jpg" alt="Propriété immobilière de luxe">
+          <h3>Maison familiale</h3>
+          <p>6 chambres 250 m2</p>
+          <span class="prix">1 800 000€ - $2 000 000</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="auto-bio">
+    <div class="bio-image">
+      <img src="./Image/image  6 (1).jpg" alt="Maison familiale">
+    </div>
+    <div class="bio-text">
+      <h2>
+        Une équipe de <span class="bio-text">professionnels</span> avec plus de 10 ans d'expérience
+      </h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam velit molestias perspiciatis obcaecati ullam ab possimus, veniam voluptates mollitia, quis magnam iure quasi. Perspiciatis temporibus laudantium nam?
+      </p>
+    </div>
+  </section>
+
+  <section id="commentaires">
+    <h2>Commentaires</h2>
+    <ul id="comment-list">
+      <!-- Les commentaires seront ajoutés ici par JavaScript -->
+    </ul>
+    <form id="comment-form">
+      <input type="file" id="image-upload" accept="image/*">
+      <input type="text" id="user-name" placeholder="Votre nom" required>
+      <textarea id="new-comment" placeholder="Ajouter un commentaire..." required></textarea>
+      <button type="submit">Poster</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>
+      Copyright &copy; EsternyMikendy@ <strong><em>IA Insight.</em></strong> All rights reserved
+    </p>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const commentList = document.getElementById('comment-list');
+      const commentForm = document.getElementById('comment-form');
+      const newCommentField = document.getElementById('new-comment');
+      const imageUploadField = document.getElementById('image-upload');
+      const userNameField = document.getElementById('user-name');
+
+      function addComment(event) {
+        event.preventDefault();
+        const userName = userNameField.value.trim();
+        const commentText = newCommentField.value.trim();
+        const imageFile = imageUploadField.files[0];
+
+        if (userName === '') {
+          alert('Veuillez entrer votre nom');
+          return;
+        }
+
+        if (commentText === '') {
+          alert('Veuillez entrer un commentaire');
+          return;
+        }
+
+        const reader = new FileReader();
+        reader.onload = function() {
+          const imageBase64 = reader.result;
+
+          const newComment = {
+            avatar: imageBase64,
+            name: userName,
+            commentaire: commentText,
+            timestamp: Date.now()
+          };
+
+          const li = document.createElement('li');
+          li.classList.add('comment');
+          li.innerHTML = `
+            <img class="user-image" src="${newComment.avatar}" alt="Avatar de l'utilisateur">
+            <div>
+              <p class="user-name">${newComment.name}</p>
+              <p>&quot;${newComment.commentaire}&quot;</p>
+              <p>Posté le ${new Date(newComment.timestamp).toLocaleDateString()}</p>
+            </div>
+          `;
+          commentList.appendChild(li);
+
+          userNameField.value = '';
+          newCommentField.value = '';
+          imageUploadField.value = '';
+        };
+
+        if (imageFile) {
+          reader.readAsDataURL(imageFile);
+        } else {
+          const defaultAvatar = './Image/default-avatar.jpg';
+          reader.readAsDataURL(defaultAvatar);
+        }
+      }
+
+      commentForm.addEventListener('submit', addComment);
+    });
+  </script>
+</body>
+</html>

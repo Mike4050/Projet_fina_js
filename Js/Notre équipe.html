@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UR-Compatible" content="ie-edge"/>
+    <link rel="stylesheet" href="../CSS/Look.css">
+    <title>Ledor| Accueil</title>
+    <script src="https://kit.fontawesome.com/645d85fd0f.js" crossorigin="anonymous"></script>
+    <style>
+        /* Style for the crown icon */
+        .fa-crown {
+            color: yellow; /* Set icon color to yellow */
+        }
+        /* Style for the Ledor logo */
+        h1 a {
+            font-family:"este"; /* Font Indie Flower for "Ledor" */
+            color: #f1f1f1; /* Set Ledor text color to yellow */
+        }
+
+        /* Animation pour les boîtes d'équipe */
+        .box {
+            transition: transform 0.3s ease;
+        }
+        .titre p {
+    color: white; /* Définit la couleur du texte en blanc */
+}
+        .box:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Ajout de l'arrière-plan */
+        body {
+            background-image: url(../Image/12375.jpg);
+            background-size: cover; /* Assure que l'image de fond couvre l'ensemble de la fenêtre */
+            background-repeat: no-repeat; /* Empêche la répétition de l'image */
+        }
+        * Style pour la section expert */
+.expert .contenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.expert .contenu .box {
+    width: 250px;
+    margin: 15px;
+}
+
+.expert .contenu .box img {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.expert .contenu .box h3 {
+    color: #111;
+    font-weight: 400;
+    text-align: center;
+}
+
+footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+           <h1>
+            <i class="fa-solid fa-crown"></i> <a href="./index.html">Ledor</a>
+           </h1>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="./index.html">Nos offres</a></li>
+                <li><a class="active" href="#">Notre équipe</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <div style="border-collapse: collapse">
+                
+            </div>
+        </nav>
+    </section>
+    
+    <section class="expert" id="expert">
+        <div class="titre">
+            <h5 class="titre-texte">Notre  <span>équipe</span></h5>
+            <p>Chez Ledor, notre équipe est bien plus qu'un simple groupe de professionnels.
+         dévouement et son engagement envers l'excellence. </p>
+        </div>
+        <div class="contenu">
+            <div class="box">
+                <div class="imbox">
+                    <img src="../Image/hito.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>San</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="../Image/hito1.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Franck </h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="../Image/equipe2.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Frantz</h3>
+                </div>
+            </div>
+            <div class="box">
+                <div class="imbox">
+                    <img src="../Image/yold1 (1).jpg" alt="">
+                </div>
+                <div class="text">
+                    <h3>Yold</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>
+            Copyright<i class="fa-regular fa-copyright"></i> EsternyMikendy@ <strong><em>IA Insight.</em></strong> All rights reserved
+        </p>
+    </footer>
+</body> 
+</html>

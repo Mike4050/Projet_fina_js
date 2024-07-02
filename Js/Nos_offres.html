@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UR-Compatible" content="ie-edge"/>
+    <link rel="stylesheet" href="../CSS/Look.css">
+    <title>Ledor | Accueil</title>
+    <script src="https://kit.fontawesome.com/645d85fd0f.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* Style for the crown icon */
+        .fa-crown {
+            color: yellow; /* Set icon color to yellow */
+        }
+        /* Style for the Ledor logo */
+        h1 a {
+            font-family: "este"; /* Font Indie Flower for "Ledor" */
+            color: #f1f1f1; /* Set Ledor text color to yellow */
+        }
+        /* Background image */
+        body {
+            background-image: url("../Image/hito0.jpg"); /* Remplacez 'chemin/vers/votre/image.jpg' par le chemin de votre image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Animation */
+        .properties-grid {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .property-item {
+            animation: bounceIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <h1>
+                <i class="fa-solid fa-crown"></i> <a href="./index.html">Ledor</a>
+            </h1>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a class="active" href="#">Nos offres</a></li>
+                <li><a href="./Notre équipe.html">Notre équipe</a></li>
+                <li><a href="./index.html">contact</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section>
+        <section class="properties">
+            <div class="container">
+                <h2></h2>
+                <div class="properties-grid">
+                    <div class="property-item">
+                        <img src="../Image/image2.jpg" alt="Propriété immobilière de luxe">
+                        <h3>Appartement Pans spos</h3>
+                        <p>21 chambres 450 m2</p>
+                        <span class="prix">3 900 000€ - $4 200 000</span>
+                    </div>
+                    <div class="property-item">
+                        <img src="../Image/image2.jpg" alt="Propriété immobilière de luxe">
+                        <h3>Appartement Pans spos</h3>
+                        <p>18 chambres 300 m2</p>
+                        <span class="prix">2 500 000€ - $2800 000</span> 
+                    </div>
+                    <div class="property-item">
+                        <img src="../Image/image2.jpg" alt="Propriété immobilière de luxe">
+                        <h3>Maison familialee</h3>
+                        <p>6 chambres 250 m2</p>
+                        <span class="prix">1 800 000€ - $2 000 000</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <footer>
+        <p>
+            Copyright<i class="fa-regular fa-copyright"></i> EsternyMikendy@ <strong><em>IA Insight.</em></strong> All rights reserved
+        </p>
+    </footer>
+</body>
+</html>
